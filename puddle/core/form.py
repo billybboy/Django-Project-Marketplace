@@ -15,6 +15,7 @@ class LoginForm(AuthenticationForm):
 
 class SignupForm(UserCreationForm):
     class Meta:
+        # 使用django.contrib.auth.models的USER預設表格，並定義只顯示的區域為('username', 'email', 'password1', 'password2')
         model = User
         fields = ('username', 'email', 'password1', 'password2')
 
